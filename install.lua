@@ -69,8 +69,6 @@ local function executeWithProgress(commands)
     drawBorder()
     centerWrite("Terminer, veuillez redémarrer votre ordinateur", 3)
     sleep(3)
-    term.clear()
-    term.setCursorPos(1,1)
 end
 
 local commands = {
@@ -96,3 +94,6 @@ local function main()
 end
 
 main()
+
+term.clear()
+term.setCursorPos(1,1)
