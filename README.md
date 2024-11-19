@@ -24,6 +24,9 @@ $ wget run https://install
 }
 
 ```
+
+<br />
+
 | Property | Definition |
 | ---- | ---- |
 | `name` | OS name |
