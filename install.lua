@@ -74,13 +74,16 @@ end
 local commands = {
     "mkdir /.bootloader/",
     "cd /.bootloader/",
+    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/boot.lua",
     "mkdir OS Logo DefaultOS",
     "cd OS/",
-    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/OS/CraftOS.json?token=GHSAT0AAAAAAC2VRA6DTNIWGN6XCJU3QPP6ZZ33WXQ",
+    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/OS/CraftOS.json",
     "cd ../Logo",
-    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/Logo/logo.nfp?token=GHSAT0AAAAAAC2VRA6CGJUGYFMU3OXWL74MZZ33XRA",
+    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/Logo/logo.nfp",
     "cd ../DefaultOS",
-    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/DefaultOS/boot.lua?token=GHSAT0AAAAAAC2VRA6DJOVNJTLC5JAGVVCKZZ33YFA",
+    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/DefaultOS/boot.lua",
+    "cd /",
+    "wget https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs/heads/main/startup.lua",
 }
 
 local function main()
