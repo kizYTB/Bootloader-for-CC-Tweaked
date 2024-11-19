@@ -53,7 +53,7 @@ local function executeWithProgress(commands)
         currentCommand = currentCommand + 1
         term.clear()
         drawBorder()
-        centerWrite("Terminer, veuillez redémarrer votre ordinateur", 3)
+        centerWrite("Installation en cours...", 3)
         drawLoadingBar(currentCommand / totalCommands, "Exécution de la commande : " .. command)
 
         term.setCursorPos(2, 5)
@@ -67,7 +67,7 @@ local function executeWithProgress(commands)
 
     term.clear()
     drawBorder()
-    centerWrite("Installation terminée !", 3)
+    centerWrite("Terminer, veuillez redémarrer votre ordinateur", 3)
     sleep(2)
 end
 
