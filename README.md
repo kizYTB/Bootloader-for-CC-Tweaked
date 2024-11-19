@@ -1,7 +1,7 @@
 <div align = "center">
+  <img src = "https://www.jtheberg.cloud/assets/img/logo.png" />
   <h1>Bootloader-for-CC-Tweaked</h1>
   <h2>Powered by Kiz___ of <a href="https://jtheberg.cloud">Jtheberg</a></h2>
-  <img src = "https://www.jtheberg.cloud/assets/img/logo.png" />
   <p>A bootloader for your OS on CC-Tweaked</p>
 </div>
 <br />
@@ -27,4 +27,4 @@ $ wget run https://install
 | Property | Definition |
 | ---- | ---- |
 | `name` | OS name |
-| `path` | Path to yout OS startup file
+| `path` | Path to your OS startup file
