@@ -1,6 +1,6 @@
 <div align = "center">
   <h1>Bootloader-for-CC-Tweaked</h1>
-  <h2>Powered by Kiz___ of [https://jtheberg.cloud](Jtheberg)</h2>
+  <h2>Powered by Kiz___ of [Jtheberg](https://jtheberg.cloud)</h2>
   <img src = "https://www.jtheberg.cloud/assets/img/logo.png" />
   <p>A bootloader for your OS on CC-Tweaked</p>
 </div>
