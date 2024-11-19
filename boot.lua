@@ -115,9 +115,9 @@ local function displayMenu(osList)
         end
 
         local _, key = os.pullEvent("key")
-        if key == keys.down then
+        if key == keys.up then
             selected = math.max(1, selected - 1)
-        elseif key == keys.up then
+        elseif key == keys.down then
             selected = math.min(#osList, selected + 1)
         elseif key == keys.enter then
             return osList[selected]
