@@ -1,15 +1,12 @@
--- Chemins
 local bootloaderDir = "/.bootloader/OS/"
 local logoPath = "/.bootloader/Logo/logo.nfp"
 
--- Couleurs
 local bgColor = colors.gray
 local textColor = colors.white
 local accentColor = colors.blue
 local highlightColor = colors.lightGray
 local borderColor = colors.black
 
--- Fonctions utilitaires
 local function centerWrite(text, y, color)
     color = color or textColor
     local w, h = term.getSize()
@@ -23,13 +20,10 @@ local function drawBorder()
     local w, h = term.getSize()
     term.setBackgroundColor(borderColor)
     term.setTextColor(colors.white)
-    -- Haut de la bordure
     term.setCursorPos(1, 1)
     term.write("+" .. string.rep("-", w - 2) .. "+")
-    -- Bas de la bordure
     term.setCursorPos(1, h)
     term.write("+" .. string.rep("-", w - 2) .. "+")
-    -- Côtés de la bordure
     for y = 2, h - 1 do
         term.setCursorPos(1, y)
         term.write("|")
@@ -38,7 +32,6 @@ local function drawBorder()
     end
 end
 
--- Barre de chargement
 local function drawLoadingBar(percentage)
     local w, h = term.getSize()
     local barLength = w - 4
@@ -53,12 +46,10 @@ local function drawLoadingBar(percentage)
     term.write("Chargement... " .. math.floor(percentage * 100) .. "%")
 end
 
--- Animation de chargement
 local function drawSpinner(duration, logoPath)
     term.setBackgroundColor(bgColor)
     term.clear()
 
-    -- Charger et afficher le logo
     if fs.exists(logoPath) then
         term.setCursorPos(1, 1)
         paintutils.drawImage(paintutils.loadImage(logoPath), 1, 1)
@@ -71,12 +62,11 @@ local function drawSpinner(duration, logoPath)
     for i = 1, duration * 4 do
         term.setCursorPos(centerX, centerY)
         term.setTextColor(textColor)
-        drawLoadingBar(i / (duration * 4))  -- Mise à jour de la barre de chargement
+        drawLoadingBar(i / (duration * 4))
         sleep(0.25)
     end
 end
 
--- Charger la liste des OS
 local function loadOSList()
     local osList = {}
     if fs.exists(bootloaderDir) then
@@ -96,7 +86,6 @@ local function loadOSList()
     return osList
 end
 
--- Menu de sélection des OS
 local function displayMenu(osList)
     term.setBackgroundColor(bgColor)
     term.clear()
@@ -136,7 +125,6 @@ local function displayMenu(osList)
     end
 end
 
--- Boot sur un OS
 local function bootOS(osData)
     term.setBackgroundColor(bgColor)
     term.clear()
@@ -146,7 +134,6 @@ local function bootOS(osData)
     shell.run(osData.path)
 end
 
--- Programme principal
 local function main()
     drawSpinner(5, logoPath)
 
@@ -166,5 +153,4 @@ local function main()
     end
 end
 
--- Lancer le bootloader
 main()
