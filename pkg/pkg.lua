@@ -1,4 +1,4 @@
-run=shell.run
+local run = shell.run
 
 run("mkdir","/.bootloader/")
 run("cd","/.bootloader/")
