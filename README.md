@@ -16,7 +16,7 @@ wget run https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs
 <br />
 
 # The Config File
- All OS that want to use this bootloader must make a configuration file in the following directory `/boot/bootloader/OS/`
+ All OS that want to use this bootloader must make a configuration file in the following directory `/.bootloader/OS/`
 ```json
 {
     "name": "OS name",
